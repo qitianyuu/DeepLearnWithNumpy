@@ -13,8 +13,8 @@ class SimplyCBOW:
         V, H = vocab_size, hidden_size
 
         # 初始化权重
-        W_in = 0.01 * np.random.randn(V,H).astype('f')
-        W_out = 0.01 * np.random.randn(H,V).astype('f')
+        W_in = 0.01 * np.random.randn(V, H).astype('f')
+        W_out = 0.01 * np.random.randn(H, V).astype('f')
 
         # 层，其中输入权重共享
         self.in_layer0 = MatMul(W_in)
