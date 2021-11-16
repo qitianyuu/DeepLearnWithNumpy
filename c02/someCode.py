@@ -9,7 +9,7 @@ import numpy as np
 text = 'You say goodbye and I say hello.'
 
 
-from common.util import preprocess, create_co_matrix, cos_similarity, most_similat, ppmi
+from common.util import preprocess, create_co_matrix, cos_similarity, most_similar, ppmi
 
 corpus, word_to_id, id_to_word = preprocess(text)
 
@@ -48,7 +48,7 @@ print('\ncorpus -> ', corpus)
 """
 co_matrix = create_co_matrix(corpus, 7, 1)
 # 求you 和 i 的余弦相似度
-most_similat('you', word_to_id, id_to_word, co_matrix)
+most_similar('you', word_to_id, id_to_word, co_matrix)
 #
 M = ppmi(co_matrix)
 # 设置3位有效数位

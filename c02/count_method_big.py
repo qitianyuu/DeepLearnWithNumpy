@@ -6,7 +6,7 @@
 """
 import dataset.ptb as ptb
 import numpy as np
-from common.util import create_co_matrix, ppmi, most_similat
+from common.util import create_co_matrix, ppmi, most_similar
 from sklearn.utils.extmath import randomized_svd
 import pickle
 
@@ -33,4 +33,4 @@ f.close()
 querys = ['you', 'year', 'car', 'plane', 'god', 'dream']
 
 for query in querys:
-    most_similat(query, word_to_id, id_to_word, word_vecs, top=5)
+    most_similar(query, word_to_id, id_to_word, word_vecs, top=5)
