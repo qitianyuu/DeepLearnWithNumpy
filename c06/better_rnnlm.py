@@ -10,7 +10,7 @@ from common.time_layers import *
 from common.base_model import BaseModel
 import numpy as np
 
-class BetterRbblm(BaseModel):
+class BetterRnnlm(BaseModel):
     def __init__(self, vocab_size=10000, wordvec_size=650, hidden_size=650, dropout_ratio=0.5):
         V, D, H =  vocab_size,  wordvec_size,  hidden_size
         rn = np.random.randn
